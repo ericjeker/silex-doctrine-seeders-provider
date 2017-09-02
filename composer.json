@@ -1,0 +1,19 @@
+{
+  "name": "ericjeker/silex-doctrine-seeders-provider",
+  "description": "Seeders for Silex",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Eric Jeker",
+      "email": "eric.jeker@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Wowww\\Silex\\Provider\\": "src/",
+      "Wowww\\Silex\\Provider\\Tests\\": "tests/"
+    }
+  }
+}
