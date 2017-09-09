@@ -13,6 +13,10 @@
   "autoload": {
     "psr-4": {
       "Wowww\\Silex\\Provider\\": "src/",
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
       "Wowww\\Silex\\Provider\\Tests\\": "tests/"
     }
   }
