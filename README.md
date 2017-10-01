@@ -4,6 +4,8 @@ Provider to allow seeders in your Silex project.
 
 ## Installation
 
+Create a `console.php` file at the root of your application directory and add this content:
+
     // create the console application
     $console = new Application();
 
