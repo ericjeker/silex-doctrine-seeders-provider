@@ -4,41 +4,40 @@ Provider to allow seeders in your Silex project.
 
 ## Installation
 
-`// create the console application
-$console = new Application();
+    // create the console application
+    $console = new Application();
 
+    // register doctrine DBAL seeder service provider
+    $app->register(new DoctrineSeedersProvider($console), [
+        'seeders.directory' => __DIR__ . '/database/seeders',
+        'seeders.name' => 'App Seeder',
+        'seeders.namespace' => 'App\Seeders'
+    ]);
 
-// register doctrine DBAL seeder service provider
-$app->register(new DoctrineSeedersProvider($console), [
-    'seeders.directory' => __DIR__ . '/database/seeders',
-    'seeders.name' => 'App Seeder',
-    'seeders.namespace' => 'App\Seeders'
-]);
-
-$console->run();`
+    $console->run();`
 
 ## Create a seeder class
 
-`<?php
+    <?php
 
-namespace App\Seeders;
+    namespace App\Seeders;
 
-use Wowww\Silex\Provider\AbstractSeeder;
+    use Wowww\Silex\Provider\AbstractSeeder;
 
-class UserSeeder extends AbstractSeeder
-{
-    public function seed()
+    class UserSeeder extends AbstractSeeder
     {
-         // ...
-         // you can access app with $this->app
-         
-         // if your seeder return an array it is considered as sub-seeders
-         return [
-             ArticleSeeder::class,
-             RegistrationsSeeder::class
-         ];
+        public function seed()
+        {
+             // ...
+             // you can access app with $this->app
+
+             // if your seeder return an array it is considered as sub-seeders
+             return [
+                 ArticleSeeder::class,
+                 RegistrationsSeeder::class
+             ];
+        }
     }
-}`
 
 ## Run the seeders
 
