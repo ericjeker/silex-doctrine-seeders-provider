@@ -12,7 +12,7 @@
   "require": {},
   "autoload": {
     "psr-4": {
-      "Wowww\\Silex\\Provider\\": "src/",
+      "Wowww\\Silex\\Provider\\": "src/"
     }
   },
   "autoload-dev": {
